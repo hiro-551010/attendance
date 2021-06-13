@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+ 
+{% block content %}
+ 
+<main class="container">
+    <div class="row">
+        <div class="col-md-8">
+        <h3 class="pb-4 mb-4 font-italic border-bottom my-2">
+            マイページ
+        </h3>
+        <form class="row g-3 h-adr" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="col-12">
+              <label class="form-label">ユーザー名（公開されます）</label>
+              <input type="text" class="form-control" id="id_username" name="username" value="{{ user.profile.username }}" placeholder="">
+            </div>
+            <div class="col-12">
+              <label class="form-label">電話番号</label>
+              <input type="text" id="id_phone_number" name="phone_number" value="{{ user.profile.phone_number }}">
+            </div>
+            <div class="col-12">
+                <label class="form-label">時給</label>
+                <input type="number" id="id_hourly_wage" name="hourly_wage" value="{{ user.profile.hourly_wage }}">
+              </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-success">保存</button>
+            </div>
+        </form>
+
+      </div>
+ 
+
+ 
+    </div>
+</main>
+ 
+ 
+{% endblock %}
