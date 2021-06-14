@@ -57,8 +57,7 @@ class Profile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, unique=True, on_delete=models.CASCADE, primary_key=True)
     username = models.CharField(default="匿名ユーザー", max_length=30)
     phone_number = models.CharField(default='電話番号', max_length=11)
-    hourly_wage = models.IntegerField(verbose_name='時給', default=0)
-
+    hourly_wage = models.IntegerField(verbose_name='時給', null=True, blank=False)
 
     def __str__(self):
         return self.username

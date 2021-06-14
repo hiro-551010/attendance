@@ -28,5 +28,6 @@ class ProfileForm(forms.ModelForm):
         model = Profile
         fields = (
             'username',
-            'phone_number'
+            'phone_number',
+            'hourly_wage',
         )

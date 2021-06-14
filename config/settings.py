@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts',
+    'payment',
 ]
 
 MIDDLEWARE = [
@@ -105,9 +106,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ja'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tokyo'
 
 USE_I18N = True
 
@@ -132,7 +133,7 @@ AUTH_USER_MODEL = 'accounts.User'
 
 LOGIN_URL = '/accounts/login/'
 
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/payment/payment'
 
 LOGOUT_URL = '/accounts/logout/'
 
